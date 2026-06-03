@@ -1,16 +1,15 @@
-import logging
+from fastapi import FastAPI
 
-logging.basicConfig(
-    level= logging.INFO,
-    format="%(asctime)s, %(levelname)s, %(message)s"
-)
-logger = logging.getLogger(__name__)
+from utils.helper import * 
+from utils.files_work import *
+from logger_config import logger
 
-file_handler =  logging.FileHandler("system.log", encoding="utf_8")
+app = FastAPI()
 
-formatter = logging.Formatter("%(asctime)s, %(levelname)s, %(message)s")
-file_handler.setFormatter(formatter)
+@app.post("/soldier")
+def make_new(body: dict):
+    create_soldier_utils(body)
+    return {"result" : "soldier created"}
 
-logger.addHandler(file_handler)
 
 
