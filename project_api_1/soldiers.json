@@ -1,1 +1,16 @@
-[{"id" : 123,"full_name" : "yoni kobi", "role" : "c.c."}]
+{
+  "123": {
+    "full_name": "yoni kobi",
+    "role": "c.c."
+  },
+  "234": {
+    "full_name": "yoni kobi",
+    "role": "c.c."
+  },
+  "1432": {
+    "id": 1432,
+    "full_name": "gogo",
+    "role": "lottenent"
+  }
+}
+
